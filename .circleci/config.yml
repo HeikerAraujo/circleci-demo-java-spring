@@ -24,6 +24,8 @@ jobs:
           paths:
             - ~/.m2
           key: circleci-demo-java-spring-{{ checksum "pom.xml" }}
+
+      - run: mvn versions:display-dependency-updates funciona
       
       - run: mvn package
       
